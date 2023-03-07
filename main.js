@@ -1,23 +1,33 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import { setupCounter } from './counter.js'
+import '/style.css'
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+async function getJSON(url) {
+  let rawData = await fetch(url)
+  let data = await rawData.json()
+  return data
+}
 
-setupCounter(document.querySelector('#counter'))
+let books
+
+async function start() {
+  books = await getJSON('/books.json')
+  displayBooks()
+}
+
+async function displayBooks() {
+  let html = ''
+  for (let book of books) {
+    html += `
+      <div class="book">
+        <h3>${book.title}</h3>
+        `
+    for (let key in book) {
+      let value = book[key]
+      html += `
+      <p><span>${key}:</span> ${value}</p>`
+    }
+    html += '</div>'
+  }
+  document.querySelector('main').innerHTML = html
+}
+
+start()
