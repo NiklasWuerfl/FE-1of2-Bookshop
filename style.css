@@ -25,3 +25,14 @@ main{
   display: inline-block;
   width: 110px;
 }
+
+.filters,
+.sortingOptions {
+  color: white;
+}
+
+label span {
+  padding-left: 25px;
+  display: inline-block;
+  width: 130px;
+}
