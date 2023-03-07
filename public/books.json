@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "title": "Responsive design with Bootstrap",
+    "author": "Some Author",
+    "description": "Task Description",
+    "category": "UX",
+    "price": 150
+  },
+  {
+    "id": 2,
+    "title": "Book title",
+    "author": "Some Author",
+    "description": "Lorem ipsum / or your text",
+    "category": "UX",
+    "price": 150
+  },
+  {
+    "id": 3,
+    "title": "Book title",
+    "author": "Some Author",
+    "description": "Lorem ipsum / or your text",
+    "category": "UX",
+    "price": 150
+  },
+  {
+    "id": 4,
+    "title": "Book title",
+    "author": "Some Author",
+    "description": "Lorem ipsum / or your text",
+    "category": "UX",
+    "price": 150
+  },
+  {
+    "id": 5,
+    "title": "Book title",
+    "author": "Some Author",
+    "description": "Lorem ipsum / or your text",
+    "category": "UX",
+    "price": 150
+  },
+  {
+    "id": 6,
+    "title": "HTML - an introduction",
+    "author": "Some Author",
+    "description": "Task Description",
+    "category": "HTML",
+    "price": 150
+  },
+  {
+    "id": 7,
+    "title": "Book title",
+    "author": "Some Author",
+    "description": "Lorem ipsum / or your text",
+    "category": "HTML",
+    "price": 150
+  },
+  {
+    "id": 8,
+    "title": "Book title",
+    "author": "Some Author",
+    "description": "Lorem ipsum / or your text",
+    "category": "HTML",
+    "price": 150
+  },
+  {
+    "id": 9,
+    "title": "Book title",
+    "author": "Some Author",
+    "description": "Lorem ipsum / or your text",
+    "category": "HTML",
+    "price": 150
+  },
+  {
+    "id": 10,
+    "title": "Book title",
+    "author": "Some Author",
+    "description": "Lorem ipsum / or your text",
+    "category": "HTML",
+    "price": 150
+  },
+  {
+    "id": 11,
+    "title": "CSS - an introduction",
+    "author": "Some Author",
+    "description": "Task Description",
+    "category": "CSS",
+    "price": 150
+  },
+  {
+    "id": 12,
+    "title": "Book title",
+    "author": "Some Author",
+    "description": "Lorem ipsum / or your text",
+    "category": "CSS",
+    "price": 150
+  },
+  {
+    "id": 13,
+    "title": "Book title",
+    "author": "Some Author",
+    "description": "Lorem ipsum / or your text",
+    "category": "CSS",
+    "price": 150
+  },
+  {
+    "id": 14,
+    "title": "Book title",
+    "author": "Some Author",
+    "description": "Lorem ipsum / or your text",
+    "category": "CSS",
+    "price": 150
+  },
+  {
+    "id": 15,
+    "title": "Book title",
+    "author": "Some Author",
+    "description": "Lorem ipsum / or your text",
+    "category": "CSS",
+    "price": 150
+  },
+  {
+    "id": 16,
+    "title": "JavaScript - an introduction",
+    "author": "Some Author",
+    "description": "Task Description",
+    "category": "JavaScript",
+    "price": 150
+  },
+  {
+    "id": 17,
+    "title": "Book title",
+    "author": "Some Author",
+    "description": "Lorem ipsum / or your text",
+    "category": "JavaScript",
+    "price": 150
+  },
+  {
+    "id": 18,
+    "title": "Book title",
+    "author": "Some Author",
+    "description": "Lorem ipsum / or your text",
+    "category": "JavaScript",
+    "price": 150
+  },
+  {
+    "id": 19,
+    "title": "Book title",
+    "author": "Some Author",
+    "description": "Lorem ipsum / or your text",
+    "category": "JavaScript",
+    "price": 150
+  },
+  {
+    "id": 20,
+    "title": "Book title",
+    "author": "Some Author",
+    "description": "Lorem ipsum / or your text",
+    "category": "JavaScript",
+    "price": 150
+  }
+]
