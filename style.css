@@ -13,6 +13,9 @@ main{
   margin: 0 auto;
 }
 
+header{
+  max-width: 1200px;
+}
 .book {
   background-color: darkblue;
   color: white;
@@ -34,5 +37,5 @@ main{
 label span {
   padding-left: 25px;
   display: inline-block;
-  width: 130px;
+  width: 180px;
 }

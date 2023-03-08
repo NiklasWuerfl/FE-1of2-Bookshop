@@ -2,161 +2,161 @@
   {
     "id": 1,
     "title": "Responsive design with Bootstrap",
-    "author": "Some Author",
+    "author": "T",
     "description": "Task Description",
     "category": "UX",
-    "price": 150
+    "price": 16
   },
   {
     "id": 2,
-    "title": "Book title",
-    "author": "Some Author",
+    "title": "e",
+    "author": "Da",
     "description": "Lorem ipsum / or your text",
     "category": "UX",
-    "price": 150
+    "price": 132
   },
   {
     "id": 3,
-    "title": "Book title",
-    "author": "Some Author",
+    "title": "t",
+    "author": "C",
     "description": "Lorem ipsum / or your text",
     "category": "UX",
-    "price": 150
+    "price": 76
   },
   {
     "id": 4,
-    "title": "Book title",
-    "author": "Some Author",
+    "title": "t",
+    "author": "D",
     "description": "Lorem ipsum / or your text",
     "category": "UX",
-    "price": 150
+    "price": 64
   },
   {
     "id": 5,
-    "title": "Book title",
-    "author": "Some Author",
+    "title": "h",
+    "author": "Z",
     "description": "Lorem ipsum / or your text",
     "category": "UX",
-    "price": 150
+    "price": 91
   },
   {
     "id": 6,
     "title": "HTML - an introduction",
-    "author": "Some Author",
+    "author": "H",
     "description": "Task Description",
     "category": "HTML",
-    "price": 150
+    "price": 34
   },
   {
     "id": 7,
-    "title": "Book title",
-    "author": "Some Author",
+    "title": "l",
+    "author": "B",
     "description": "Lorem ipsum / or your text",
     "category": "HTML",
-    "price": 150
+    "price": 38
   },
   {
     "id": 8,
-    "title": "Book title",
-    "author": "Some Author",
+    "title": "e",
+    "author": "G",
     "description": "Lorem ipsum / or your text",
     "category": "HTML",
-    "price": 150
+    "price": 49
   },
   {
     "id": 9,
-    "title": "Book title",
-    "author": "Some Author",
+    "title": "u",
+    "author": "A",
     "description": "Lorem ipsum / or your text",
     "category": "HTML",
-    "price": 150
+    "price": 60
   },
   {
     "id": 10,
-    "title": "Book title",
-    "author": "Some Author",
+    "title": "q",
+    "author": "a",
     "description": "Lorem ipsum / or your text",
     "category": "HTML",
-    "price": 150
+    "price": 100
   },
   {
     "id": 11,
     "title": "CSS - an introduction",
-    "author": "Some Author",
+    "author": "a",
     "description": "Task Description",
     "category": "CSS",
-    "price": 150
+    "price": 20
   },
   {
     "id": 12,
-    "title": "Book title",
-    "author": "Some Author",
+    "title": "x",
+    "author": "a",
     "description": "Lorem ipsum / or your text",
     "category": "CSS",
-    "price": 150
+    "price": 6
   },
   {
     "id": 13,
-    "title": "Book title",
-    "author": "Some Author",
+    "title": "b",
+    "author": "a",
     "description": "Lorem ipsum / or your text",
     "category": "CSS",
-    "price": 150
+    "price": 103
   },
   {
     "id": 14,
-    "title": "Book title",
-    "author": "Some Author",
+    "title": "i",
+    "author": "a",
     "description": "Lorem ipsum / or your text",
     "category": "CSS",
-    "price": 150
+    "price": 122
   },
   {
     "id": 15,
-    "title": "Book title",
-    "author": "Some Author",
+    "title": "t",
+    "author": "a",
     "description": "Lorem ipsum / or your text",
     "category": "CSS",
-    "price": 150
+    "price": 75
   },
   {
     "id": 16,
     "title": "JavaScript - an introduction",
-    "author": "Some Author",
+    "author": "j",
     "description": "Task Description",
     "category": "JavaScript",
-    "price": 150
+    "price": 86
   },
   {
     "id": 17,
-    "title": "Book title",
-    "author": "Some Author",
+    "title": "m",
+    "author": "jl",
     "description": "Lorem ipsum / or your text",
     "category": "JavaScript",
-    "price": 150
+    "price": 36
   },
   {
     "id": 18,
-    "title": "Book title",
-    "author": "Some Author",
+    "title": "l",
+    "author": "o",
     "description": "Lorem ipsum / or your text",
     "category": "JavaScript",
-    "price": 150
+    "price": 46
   },
   {
     "id": 19,
-    "title": "Book title",
-    "author": "Some Author",
+    "title": "ö",
+    "author": "r",
     "description": "Lorem ipsum / or your text",
     "category": "JavaScript",
-    "price": 150
+    "price": 55
   },
   {
     "id": 20,
-    "title": "Book title",
-    "author": "Some Author",
+    "title": "q",
+    "author": "q",
     "description": "Lorem ipsum / or your text",
     "category": "JavaScript",
-    "price": 150
+    "price": 76
   }
 ]
