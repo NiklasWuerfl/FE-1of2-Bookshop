@@ -17,7 +17,7 @@ let books,
   chosenSortOption = 'ID',
   categories = [],
   authors = [],
-  priceIntervals = ['0-40', '40-80', '80-120', '120-160'],
+  priceIntervals = ['0 € - 40 €', '40 € - 80 €', '80 € - 120 €', '120 € - 160 €'],
   filteredBooks,
   chosenSortOrder = 'asc';
   
@@ -145,10 +145,10 @@ function displayBooks() {
   }
 
   if (chosenPriceFilter !== 'all') {
-    if (chosenPriceFilter === '0-40') { filteredBooks = books.filter(({ price }) => price <= 40); }
-    if (chosenPriceFilter === '40-80') { filteredBooks = books.filter(({ price }) => price <= 80 && price >= 40); } 
-    if (chosenPriceFilter === '80-120') { filteredBooks = books.filter(({ price }) => price <= 120 && price >= 80); }
-    if (chosenPriceFilter === '120-160') { filteredBooks = books.filter(({ price }) => price >= 120); }
+    if (chosenPriceFilter === '0 € - 40 €') { filteredBooks = books.filter(({ price }) => price <= 40); }
+    if (chosenPriceFilter === '40 € - 80 €') { filteredBooks = books.filter(({ price }) => price <= 80 && price >= 40); } 
+    if (chosenPriceFilter === '80 € - 120 €') { filteredBooks = books.filter(({ price }) => price <= 120 && price >= 80); }
+    if (chosenPriceFilter === '120 € - 160 €') { filteredBooks = books.filter(({ price }) => price >= 120); }
     // maybe an alternative way?
     // filteredBooks = books.filter(
     //   ({ price }) => chosenPriceFilter === 'all'
@@ -170,21 +170,53 @@ function displayBooks() {
   let htmlArray = filteredBooks.map(({
     id, title, author, description, category, price
   }) => /*html*/`
-    <div class="book">
+    <div class="book" id = "${id}">
       <h3>${title}</h3>
-      <p><span>id</span>${id}</p>
-      <p><span>author</span>${author}</p>
-      <p><span>description</span>${description}</p>
-      <p><span>category</span>${category}</p>
-      <p><span>price</span>${price}</p>
+      <p><span>ID</span>${id}</p>
+      <p><span>Author</span>${author}</p>
+      <p><span>Description</span>${description}</p>
+      <p><span>Category</span>${category}</p>
+      <p><span>Price</span>${price} €</p>
       <button class="buy" id = "${id}">Buy</button>
     </div>
   `);
   document.querySelector('.bookList').innerHTML = htmlArray.join('');
+      
+    let allDetailButtons = document.querySelectorAll('.book')
+  // Adding Event Listener to all Buttons, to add to shopping cart
+  Array.from(allDetailButtons).forEach(button => {
+    button.addEventListener('click', (event) => {
+      console.log(event.target.id)
+      displayDetails(parseInt(event.target.id));
+    });
+  });
+  cart.addButtonListeners()
+}
+
+function displayDetails(id) {
+  let book = books.filter((book) => id === book.id)[0];
+  let html =  /*html*/`
+    <div class="details">
+      <h3>${book.title}</h3>
+      <p><span>id</span>${book.id}</p>
+      <p><span>author</span>${book.author}</p>
+      <p><span>description</span>${book.description}</p>
+      <p><span>category</span>${book.category}</p>
+      <p><span>price</span>${book.price}</p>
+      <button class="buy" id = "${book.id}">Buy</button>
+    </div>
+  `;
+
+  document.querySelector('.bookDetails').innerHTML = html;
+  document.querySelector('.bookList').innerHTML = '';
+  document.querySelector('.backIcon').innerHTML = `<button class = "backButton">go back</button>`
+  document.querySelector('.backButton').addEventListener('click', () => {
+    document.querySelector('.backIcon').innerHTML = ""
+    document.querySelector('.bookDetails').innerHTML = ""
+    displayBooks()
+  })
 
   cart.addButtonListeners()
-
-
 }
 
 
