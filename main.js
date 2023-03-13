@@ -1,4 +1,7 @@
 import '/style.css'
+import sort from '/sorting.js'
+import cart from '/shoppingCart.js'
+import '/filters.js'
 
 async function getJSON(url) {
   let rawData = await fetch(url)
@@ -6,6 +9,7 @@ async function getJSON(url) {
   return data
 }
 
+// declaring global variables
 let books,
   chosenCategoryFilter = 'all',
   chosenAuthorFilter = 'all',
@@ -24,48 +28,8 @@ async function start() {
   getAuthors();
   addFilters();
   addSortingOptions();
-  sortByTitle(books);
+  sort.sortByTitle(books);
   displayBooks()
-}
-
-function sortByAuthor(books) {
-  books.sort(({ author: aAuthor }, { author: bAuthor }) =>
-    aAuthor > bAuthor ? 1 : -1);
-}
-
-function sortByAuthorDes(books) {
-  books.sort(({ author: aAuthor }, { author: bAuthor }) =>
-    aAuthor > bAuthor ? -1 : 1);
-}
-
-function sortByTitle(books) {
-  books.sort(({ title: aTitle }, { title: bTitle }) =>
-    aTitle > bTitle ? 1 : -1);
-}
-
-function sortByTitleDes(books) {
-  books.sort(({ title: aTitle }, { title: bTitle }) =>
-    aTitle > bTitle ? -1 : 1);
-}
-
-function sortByPrice(books) {
-  books.sort(({ price: aPrice }, { price: bPrice }) =>
-    aPrice > bPrice ? 1 : -1);
-}
-
-function sortByPriceDes(books) {
-  books.sort(({ price: aPrice }, { price: bPrice }) =>
-  aPrice > bPrice ? -1 : 1);
-}
-
-function sortById(books) {
-  books.sort(({ id: aId }, { id: bId }) =>
-    aId > bId ? 1 : -1);
-}
-
-function sortByIdDes(books) {
-  books.sort(({ id: aId }, { id: bId }) =>
-    aId > bId ? -1 : 1);
 }
 
 function addSortingOptions() {
@@ -180,7 +144,6 @@ function displayBooks() {
     );
   }
 
-
   if (chosenPriceFilter !== 'all') {
     if (chosenPriceFilter === '0-40') { filteredBooks = books.filter(({ price }) => price <= 40); }
     if (chosenPriceFilter === '40-80') { filteredBooks = books.filter(({ price }) => price <= 80 && price >= 40); } 
@@ -193,15 +156,16 @@ function displayBooks() {
     // );
   }
 
-  // !! add filter for Author and Price Ranges !!
-  if (chosenSortOption === 'ID' && chosenSortOrder === 'asc') { sortById(filteredBooks); }
-  if (chosenSortOption === 'ID' && chosenSortOrder === 'des') { sortByIdDes(filteredBooks); }
-  if (chosenSortOption === 'Title' && chosenSortOrder === 'asc') { sortByTitle(filteredBooks); }
-  if (chosenSortOption === 'Title' && chosenSortOrder === 'des') { sortByTitleDes(filteredBooks); }
-  if (chosenSortOption === 'Price' && chosenSortOrder === 'asc') { sortByPrice(filteredBooks); }
-  if (chosenSortOption === 'Price' && chosenSortOrder === 'des') { sortByPriceDes(filteredBooks); }
-  if (chosenSortOption === 'Author' && chosenSortOrder === 'asc') { sortByAuthor(filteredBooks); }
-  if (chosenSortOption === 'Author' && chosenSortOrder === 'des') { sortByAuthorDes(filteredBooks); }
+  // pass order ass parameter?
+  // Would decrese code here by 50%
+  if (chosenSortOption === 'ID' && chosenSortOrder === 'asc') { sort.sortById(filteredBooks); }
+  if (chosenSortOption === 'ID' && chosenSortOrder === 'des') { sort.sortByIdDes(filteredBooks); }
+  if (chosenSortOption === 'Title' && chosenSortOrder === 'asc') { sort.sortByTitle(filteredBooks); }
+  if (chosenSortOption === 'Title' && chosenSortOrder === 'des') { sort.sortByTitleDes(filteredBooks); }
+  if (chosenSortOption === 'Price' && chosenSortOrder === 'asc') { sort.sortByPrice(filteredBooks); }
+  if (chosenSortOption === 'Price' && chosenSortOrder === 'des') { sort.sortByPriceDes(filteredBooks); }
+  if (chosenSortOption === 'Author' && chosenSortOrder === 'asc') { sort.sortByAuthor(filteredBooks); }
+  if (chosenSortOption === 'Author' && chosenSortOrder === 'des') { sort.sortByAuthorDes(filteredBooks); }
   // !! add sort options for Author and DESCENDING for all of them !!
   let htmlArray = filteredBooks.map(({
     id, title, author, description, category, price
@@ -213,9 +177,17 @@ function displayBooks() {
       <p><span>description</span>${description}</p>
       <p><span>category</span>${category}</p>
       <p><span>price</span>${price}</p>
+      <button class="buy" id = "${id}">Buy</button>
     </div>
   `);
   document.querySelector('.bookList').innerHTML = htmlArray.join('');
+
+  cart.addButtonListeners()
+
+
 }
 
+
 start()
+
+export {displayBooks, books}

@@ -22,9 +22,24 @@ header{
   padding: 20px;
   margin: 20px;
   border-radius: 10px;
+  line-height: 10%;
+}
+
+.cartBook {
+  background-color: lightblue;
+  color: black;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  line-height: 10%;
 }
 
 .book p span {
+  display: inline-block;
+  width: 110px;
+}
+
+.cartBook p span {
   display: inline-block;
   width: 110px;
 }
@@ -39,3 +54,9 @@ label span {
   display: inline-block;
   width: 180px;
 }
+
+button {
+  background-color: lightblue;
+  border-radius: 5px;
+}
+
