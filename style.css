@@ -88,3 +88,11 @@ button {
   display: inline-block;
   width: 110px;
 }
+
+img{
+  max-width: 500px;
+}
+
+tfoot{
+  font-weight: 700;
+}

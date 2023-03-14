@@ -72,28 +72,73 @@ function showCart() {
   let htmlArray = cartBooks.map(({
     id, title, author, description, category, price, quantity
   }) =>
+  // book title, number of books of that title, the book price and a row sum
   /*html*/`
-    <div class="cartBook">
-      <h3>${title}</h3>
-      <p><span>ID</span>${id}</p>
-      <p><span>Author</span>${author}</p>
-      <p><span>Description</span>${description}</p>
-      <p><span>Category</span>${category}</p>
-      <p><span>Price</span>${price} €</p>
-      <p><span>Quantity</span>${quantity}</p>
-      <p><span>Subtotal</span>${quantity * price} €</p>
-    </div>
+    <tr class="cartBook">
+      <td>${title}</td>
+      <td>${price} €</td>
+      <td><button class = "decreaseQuantity" id = "${id}">-</button></td>
+      <td>${quantity}</td>
+      <td><button class = "increaseQuantity" id = "${id}">+</button></td>
+      <td>${quantity * price} €</td>
+    </tr>
+    
   `);
-  let htmlTotal = /*html*/`
-  <div class = "Total Sum">
-    <h3><span>Total:</span>${total} €</h3>
-  </div>
+  let htmlTableHeader = /*html*/`
+  <tr>
+    <th>Title</th>
+    <th>Price</th>
+    <th></th>
+    <th>Quantity</th>
+    <th ></th>
+    <th>Subtotal</th>
+  </tr>
 `
+
+  let htmlTotal = /*html*/`
+  <tfoot class = "Total Sum">
+    <td>Total:</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>${total} €</td>
+  </tfoot>
+`
+  
+  let emptyButton = "<button class = 'emptyCart'>empty Cart</button>"
+  htmlArray.unshift(htmlTableHeader)
+  htmlArray.unshift(emptyButton)
   htmlArray.push(htmlTotal)
   document.querySelector('.bookList').innerHTML = ""
   document.querySelector('.bookDetails').innerHTML = ""
   document.querySelector('.backIcon').innerHTML = `<button class = "backButton">go back</button>`
   document.querySelector('.cartContent').innerHTML = htmlArray.join('');
+
+  // increase Quantity By One
+  let allPlusButtons = document.querySelectorAll('.increaseQuantity')
+  Array.from(allPlusButtons).forEach(button => {
+    button.addEventListener('click', event => {
+      addToCart(parseInt(event.target.id));
+      showCart()
+    });
+  });
+  // decrease Quantity By One
+  let allMinusButtons = document.querySelectorAll('.decreaseQuantity')
+  Array.from(allMinusButtons).forEach(button => {
+    button.addEventListener('click', event => {
+      let index = shoppingCart.indexOf(parseInt(event.target.id));
+      shoppingCart.splice(index,1)
+      showCart()
+    });
+  });
+  // empty Cart
+  document.querySelector('.emptyCart').addEventListener('click', () => {
+      shoppingCart = []
+      showCart()
+  });
+
+
   document.querySelector('.backButton').addEventListener('click', () => {
     document.querySelector('.backIcon').innerHTML = ""
     document.querySelector('.cartContent').innerHTML = ""
@@ -104,7 +149,7 @@ function showCart() {
 
 function addToCart(id) {
   shoppingCart.push(id)
-  console.log(`Book ${id} with the title ${'noch nicht klar'} has been added to the shopping cart.`)
+  console.log(`Book ${id} has been added to the shopping cart.`)
   console.log(`New shopping cart: ${shoppingCart}`)
   console.log(shoppingCart);
 }

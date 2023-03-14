@@ -174,7 +174,6 @@ function displayBooks() {
       <h3>${title}</h3>
       <p><span>ID</span>${id}</p>
       <p><span>Author</span>${author}</p>
-      <p><span>Description</span>${description}</p>
       <p><span>Category</span>${category}</p>
       <p><span>Price</span>${price} €</p>
       <button class="buy" id = "${id}">Buy</button>
@@ -182,19 +181,23 @@ function displayBooks() {
   `);
   document.querySelector('.bookList').innerHTML = htmlArray.join('');
       
-    let allDetailButtons = document.querySelectorAll('.book')
-  // Adding Event Listener to all Buttons, to add to shopping cart
+  let allDetailButtons = document.querySelectorAll('.book')
+  // Adding Event Listener to all Book Items, to display details
   Array.from(allDetailButtons).forEach(button => {
     button.addEventListener('click', (event) => {
-      console.log(event.target.id)
-      displayDetails(parseInt(event.target.id));
+      console.log(event.target)
+      if (toString(event.target).includes('<div>')) {
+        displayDetails(parseInt(event.target.id));
+      } else {
+        displayDetails(parseInt(event.target.parentNode.id));
+      }
     });
   });
   cart.addButtonListeners()
 }
 
 function displayDetails(id) {
-  let book = books.filter((book) => id === book.id)[0];
+  let book = books.find((b) => id === b.id);
   let html =  /*html*/`
     <div class="details">
       <h3>${book.title}</h3>
@@ -203,6 +206,7 @@ function displayDetails(id) {
       <p><span>description</span>${book.description}</p>
       <p><span>category</span>${book.category}</p>
       <p><span>price</span>${book.price}</p>
+      <img src="/image${book.id}.jpg" alt="Bookcover for the displayed book">
       <button class="buy" id = "${book.id}">Buy</button>
     </div>
   `;
