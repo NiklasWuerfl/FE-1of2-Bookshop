@@ -171,11 +171,11 @@ function displayBooks() {
     id, title, author, description, category, price
   }) => /*html*/`
     <div class="book" id = "${id}">
-      <h3>${title}</h3>
-      <p><span>ID</span>${id}</p>
-      <p><span>Author</span>${author}</p>
-      <p><span>Category</span>${category}</p>
-      <p><span>Price</span>${price} €</p>
+      <h3 id = "${id}">${title}</h3>
+      <p id = "${id}"><span id = "${id}">ID</span>${id}</p>
+      <p id = "${id}"><span id = "${id}">Author</span>${author}</p>
+      <p id = "${id}"><span id = "${id}">Category</span>${category}</p>
+      <p id = "${id}"><span id = "${id}">Price</span>${price} €</p>
       <button class="buy" id = "${id}">Buy</button>
     </div>
   `);
@@ -185,12 +185,13 @@ function displayBooks() {
   // Adding Event Listener to all Book Items, to display details
   Array.from(allDetailButtons).forEach(button => {
     button.addEventListener('click', (event) => {
-      console.log(event.target)
-      if (toString(event.target).includes('<div>')) {
-        displayDetails(parseInt(event.target.id));
-      } else {
-        displayDetails(parseInt(event.target.parentNode.id));
-      }
+      console.log(event.target.id)
+      displayDetails(parseInt(event.target.id))
+      // if (toString(event.target).includes('<div>')) {
+      //   displayDetails(parseInt(event.target.id));
+      // } else {
+      //   displayDetails(parseInt(event.target.parentNode.id));
+      // }
     });
   });
   cart.addButtonListeners()
