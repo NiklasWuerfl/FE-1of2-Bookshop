@@ -106,6 +106,8 @@ function addFilters() {
       chosenPriceFilter = 'all';
       // document.getElementsByClassName('.authorFilter').selectedIndex(0)
       console.log(chosenCategoryFilter);
+      document.querySelector('.authorFilter').value = 'all'
+      document.querySelector('.priceFilter').value = 0
       displayBooks();
     }
   );
@@ -116,6 +118,8 @@ function addFilters() {
       chosenAuthorFilter = event.target.value;
       chosenCategoryFilter = 'all';
       chosenPriceFilter = 'all';
+      document.querySelector('.categoryFilter').value = 'all'
+      document.querySelector('.priceFilter').value = 0
       displayBooks();
     }
   );
@@ -126,6 +130,8 @@ function addFilters() {
       chosenPriceFilter = event.target.value;
       chosenAuthorFilter = 'all';
       chosenCategoryFilter = 'all';
+      document.querySelector('.categoryFilter').value = 'all'
+      document.querySelector('.authorFilter').value = 'all'
       displayBooks();
     }
   );
