@@ -11,7 +11,7 @@
     "id": 2,
     "title": "e",
     "author": "Da",
-    "description": "Lorem ipsum / or your text",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquet suscipit quam id feugiat. Duis auctor aliquet ultricies. Fusce at ligula a libero tristique tincidunt vel vitae nulla. Donec quis pharetra nibh, quis malesuada arcu. In porttitor metus nulla, quis dignissim metus bibendum sed. Vestibulum lobortis, nulla nec ultrices ullamcorper, odio purus suscipit tellus, sit amet rhoncus sapien mi vel dui.",
     "category": "UX",
     "price": 132
   },
@@ -19,7 +19,7 @@
     "id": 3,
     "title": "t",
     "author": "C",
-    "description": "Lorem ipsum / or your text",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu massa ut neque placerat rhoncus. Praesent sodales magna vitae risus fringilla, eu semper massa tincidunt. Aenean suscipit auctor ex, ut convallis mauris tincidunt ut. Donec non lectus vel ante convallis mollis. Duis bibendum elit sed elit tristique, nec finibus sapien imperdiet. Quisque ut fringilla nulla.",
     "category": "UX",
     "price": 76
   },
@@ -27,7 +27,7 @@
     "id": 4,
     "title": "t",
     "author": "D",
-    "description": "Lorem ipsum / or your text",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut velit euismod, convallis nibh sed, malesuada augue. Duis ullamcorper libero quis enim euismod commodo. Vestibulum eleifend scelerisque mauris, vel feugiat enim ultricies a. Nullam rutrum neque in libero facilisis tristique. Curabitur commodo metus eu ipsum pretium, id maximus turpis pellentesque.",
     "category": "UX",
     "price": 64
   },
@@ -35,7 +35,7 @@
     "id": 5,
     "title": "h",
     "author": "Z",
-    "description": "Lorem ipsum / or your text",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod nunc id metus luctus bibendum. Etiam at mauris sed purus rutrum tristique. Praesent euismod, augue sit amet accumsan hendrerit, purus leo maximus augue, eu bibendum ex sapien ac mi. Morbi scelerisque nunc vel aliquam rutrum. Mauris ut felis ac velit laoreet dictum.",
     "category": "UX",
     "price": 91
   },
@@ -51,7 +51,7 @@
     "id": 7,
     "title": "l",
     "author": "B",
-    "description": "Lorem ipsum / or your text",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non orci sed sapien faucibus placerat. Maecenas semper, eros vel blandit commodo, elit purus blandit ante, eu pulvinar felis massa sit amet justo. Nam euismod nibh ac purus dignissim, eget malesuada dolor dignissim. Fusce semper libero a ligula varius hendrerit.",
     "category": "HTML",
     "price": 38
   },
@@ -59,7 +59,7 @@
     "id": 8,
     "title": "e",
     "author": "G",
-    "description": "Lorem ipsum / or your text",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at ante mi. Duis ultrices quis nisi in euismod. Curabitur vitae blandit odio. Donec congue orci vel tellus luctus convallis. Aenean in velit eget ipsum luctus efficitur. Praesent suscipit orci ut risus vehicula, at fringilla ipsum laoreet.",
     "category": "HTML",
     "price": 49
   },
@@ -67,7 +67,7 @@
     "id": 9,
     "title": "u",
     "author": "A",
-    "description": "Lorem ipsum / or your text",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam feugiat posuere augue, at elementum velit. Nulla facilisi. Nulla posuere enim non leo vestibulum, sed lacinia ipsum varius. Quisque ac ante imperdiet, commodo tellus sed, maximus lorem. Vivamus et orci nec massa eleifend semper a vel magna. Mauris eu felis commodo, aliquet arcu sit amet, efficitur massa.",
     "category": "HTML",
     "price": 60
   },
@@ -75,7 +75,7 @@
     "id": 10,
     "title": "q",
     "author": "a",
-    "description": "Lorem ipsum / or your text",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non orci sed sapien faucibus placerat. Maecenas semper, eros vel blandit commodo, elit purus blandit ante, eu pulvinar felis massa sit amet justo. Nam euismod nibh ac purus dignissim, eget malesuada dolor dignissim. Fusce semper libero a ligula varius hendrerit.",
     "category": "HTML",
     "price": 100
   },
@@ -91,7 +91,7 @@
     "id": 12,
     "title": "x",
     "author": "a",
-    "description": "Lorem ipsum / or your text",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquet suscipit quam id feugiat. Duis auctor aliquet ultricies. Fusce at ligula a libero tristique tincidunt vel vitae nulla. Donec quis pharetra nibh, quis malesuada arcu. In porttitor metus nulla, quis dignissim metus bibendum sed. Vestibulum lobortis, nulla nec ultrices ullamcorper, odio purus suscipit tellus, sit amet rhoncus sapien mi vel dui.",
     "category": "CSS",
     "price": 6
   },
@@ -99,7 +99,7 @@
     "id": 13,
     "title": "b",
     "author": "a",
-    "description": "Lorem ipsum / or your text",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu massa ut neque placerat rhoncus. Praesent sodales magna vitae risus fringilla, eu semper massa tincidunt. Aenean suscipit auctor ex, ut convallis mauris tincidunt ut. Donec non lectus vel ante convallis mollis. Duis bibendum elit sed elit tristique, nec finibus sapien imperdiet. Quisque ut fringilla nulla.",
     "category": "CSS",
     "price": 103
   },
@@ -107,7 +107,7 @@
     "id": 14,
     "title": "i",
     "author": "a",
-    "description": "Lorem ipsum / or your text",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut velit euismod, convallis nibh sed, malesuada augue. Duis ullamcorper libero quis enim euismod commodo. Vestibulum eleifend scelerisque mauris, vel feugiat enim ultricies a. Nullam rutrum neque in libero facilisis tristique. Curabitur commodo metus eu ipsum pretium, id maximus turpis pellentesque.",
     "category": "CSS",
     "price": 122
   },
@@ -115,7 +115,7 @@
     "id": 15,
     "title": "t",
     "author": "a",
-    "description": "Lorem ipsum / or your text",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod nunc id metus luctus bibendum. Etiam at mauris sed purus rutrum tristique. Praesent euismod, augue sit amet accumsan hendrerit, purus leo maximus augue, eu bibendum ex sapien ac mi. Morbi scelerisque nunc vel aliquam rutrum. Mauris ut felis ac velit laoreet dictum.",
     "category": "CSS",
     "price": 75
   },
@@ -131,7 +131,7 @@
     "id": 17,
     "title": "m",
     "author": "jl",
-    "description": "Lorem ipsum / or your text",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non orci sed sapien faucibus placerat. Maecenas semper, eros vel blandit commodo, elit purus blandit ante, eu pulvinar felis massa sit amet justo. Nam euismod nibh ac purus dignissim, eget malesuada dolor dignissim. Fusce semper libero a ligula varius hendrerit.",
     "category": "JavaScript",
     "price": 36
   },
@@ -139,7 +139,7 @@
     "id": 18,
     "title": "l",
     "author": "o",
-    "description": "Lorem ipsum / or your text",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at ante mi. Duis ultrices quis nisi in euismod. Curabitur vitae blandit odio. Donec congue orci vel tellus luctus convallis. Aenean in velit eget ipsum luctus efficitur. Praesent suscipit orci ut risus vehicula, at fringilla ipsum laoreet.",
     "category": "JavaScript",
     "price": 46
   },
@@ -147,7 +147,7 @@
     "id": 19,
     "title": "ö",
     "author": "r",
-    "description": "Lorem ipsum / or your text",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam feugiat posuere augue, at elementum velit. Nulla facilisi. Nulla posuere enim non leo vestibulum, sed lacinia ipsum varius. Quisque ac ante imperdiet, commodo tellus sed, maximus lorem. Vivamus et orci nec massa eleifend semper a vel magna. Mauris eu felis commodo, aliquet arcu sit amet, efficitur massa.",
     "category": "JavaScript",
     "price": 55
   },
@@ -155,7 +155,7 @@
     "id": 20,
     "title": "q",
     "author": "q",
-    "description": "Lorem ipsum / or your text",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non orci sed sapien faucibus placerat. Maecenas semper, eros vel blandit commodo, elit purus blandit ante, eu pulvinar felis massa sit amet justo. Nam euismod nibh ac purus dignissim, eget malesuada dolor dignissim. Fusce semper libero a ligula varius hendrerit.",
     "category": "JavaScript",
     "price": 76
   }

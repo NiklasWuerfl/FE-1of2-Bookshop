@@ -77,9 +77,9 @@ function showCart() {
     <tr class="cartBook">
       <td>${title}</td>
       <td>${price} €</td>
-      <td><button class = "decreaseQuantity" id = "${id}">-</button></td>
+      <td><button class = "decreaseQuantity bg-secondary" id = "${id}">-</button></td>
       <td>${quantity}</td>
-      <td><button class = "increaseQuantity" id = "${id}">+</button></td>
+      <td><button class = "increaseQuantity bg-secondary" id = "${id}">+</button></td>
       <td>${quantity * price} €</td>
     </tr>
     
@@ -97,23 +97,23 @@ function showCart() {
 
   let htmlTotal = /*html*/`
   <tfoot class = "Total Sum">
-    <td>Total:</td>
+    <td><b>Total:</b></td>
     <td></td>
     <td></td>
     <td></td>
     <td></td>
-    <td>${total} €</td>
+    <td><b>${total} €</b></td>
   </tfoot>
 `
   
-  let emptyButton = "<button class = 'emptyCart'>empty Cart</button>"
+  let emptyButton = "<button class = 'emptyCart bg-secondary'>empty Cart</button>"
   htmlArray.unshift(htmlTableHeader)
-  htmlArray.unshift(emptyButton)
   htmlArray.push(htmlTotal)
   document.querySelector('.bookList').innerHTML = ""
   document.querySelector('.bookDetails').innerHTML = ""
-  document.querySelector('.backIcon').innerHTML = `<button class = "backButton">go back</button>`
-  document.querySelector('.cartContent').innerHTML = htmlArray.join('');
+  document.querySelector('.backIcon').innerHTML = `<button class = "backButton bg-secondary">go back</button>`
+  document.querySelector('.cartContent').innerHTML = htmlArray.join('')
+  document.querySelector('.emptyIcon').innerHTML = emptyButton
 
   // increase Quantity By One
   let allPlusButtons = document.querySelectorAll('.increaseQuantity')

@@ -1,3 +1,7 @@
+@import 'variable-overrides.scss';
+@import "bootstrap/scss/bootstrap";
+
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -5,24 +9,16 @@
 }
 
 body {
-  background-color: rgb(186, 174, 174);
+  background: fixed url('/background.jpg');
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 main{
-  max-width: 700px;
+  flex: 1;
+  // max-width: 700px;
   margin: 0 auto;
-}
-
-header{
-  max-width: 1200px;
-}
-.book {
-  background-color: darkblue;
-  color: white;
-  padding: 20px;
-  margin: 20px;
-  border-radius: 10px;
-  /* line-height: 1 */
 }
 
 .cartBook {
@@ -34,10 +30,12 @@ header{
   /* line-height: 10%; */
 }
 
-.book p span {
-  display: inline-block;
-  width: 110px;
-}
+// .book p span {
+//   display: inline-block;
+//   // width: 110px;
+//   font-weight: 700;
+
+// }
 
 .cartBook p span {
   display: inline-block;
@@ -49,11 +47,11 @@ header{
   color: white;
 }
 
-label span {
-  padding-left: 25px;
-  display: inline-block;
-  width: 180px;
-}
+// label span {
+//   padding-left: 25px;
+//   display: inline-block;
+//   width: 180px;
+// }
 
 button {
   background-color: lightblue;
@@ -64,17 +62,17 @@ button {
   /* background-color: white; */
   color: black;
   padding: 20px;
-  margin: 20px;
+  margin: 0px;
   border-radius: 0px;
   line-height: 80%;
 }
 
 .details{
   background-color: white;
+  position: relative;
   color: black;
   padding: 20px;
-  margin: 20px;
-  border-radius: 0px;
+  margin: 0px;
   border-radius: 10px;
   line-height: 110%;
 }
@@ -82,7 +80,16 @@ button {
 .details p span {
   display: inline-block;
   width: 110px;
+  text-align: left;
+  font-weight: 700;
+  /* height: 100px; */
+  margin-bottom: 10px;
 }
+/* span::before {
+  content: "Title:";
+  display: block;
+  margin-bottom: 5px;
+} */
 
 .cartContent h3 span {
   display: inline-block;
@@ -90,9 +97,10 @@ button {
 }
 
 img{
-  max-width: 500px;
-}
-
-tfoot{
-  font-weight: 700;
+  max-width: 90%;
+  margin: 0 auto;
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
 }

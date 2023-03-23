@@ -1,14 +1,74 @@
-import './scss/style.scss'
-import sort from '/sorting.js'
-import cart from '/shoppingCart.js'
-import '/filters.js'
-import * as bootstrap from 'bootstrap'
+import '../scss/style.scss'
+import sort from './sorting.js'
+import cart from './shoppingCart.js'
+import './filters.js'
 
 async function getJSON(url) {
   let rawData = await fetch(url)
   let data = await rawData.json()
   return data
 }
+// Start of copy
+// HTML-component + SPA/routing example in Vanilla JS
+// © ironboy, Node Hill AB, 2023
+
+// import the main scss file: the scss will compile to css
+// and hot reload on changes thanks to Vite
+import '../scss/style.scss';
+
+// import bootstrap JS part
+import * as bootstrap from 'bootstrap';
+
+// helper: grab a DOM element
+const $ = el => document.querySelector(el);
+
+// helper: fetch a text/html file (and remove vite injections)
+const fetchText = async url => (await (await (fetch(url))).text())
+  .replace(/<script.+?vite\/client.+?<\/script>/g, '');
+
+// helper: replace a DOM element with new element(s) from html string
+function replaceElement(element, html, remove = true) {
+  let div = document.createElement('div');
+  div.innerHTML = html;
+  for (let newElement of [...div.children]) {
+    element.after(newElement, element);
+  }
+  remove && element.remove();
+}
+
+// mount components (tags like <component="app"> etc 
+// will be replaced with content from the html folder)
+async function componentMount() {
+  while (true) {
+    let c = $('component');
+    if (!c) { break; }
+    let src = `/html${c.getAttribute('src')}.html`;
+    let html = await fetchText(src);
+    replaceElement(c, html);
+  }
+  repeatElements();
+}
+
+// repeat DOM elements if they have the attribute 
+// repeat = "x" set to a positive number
+function repeatElements() {
+  while (true) {
+    let r = $('[repeat]');
+    if (!r) { break; }
+    let count = Math.max(1, +r.getAttribute('repeat'));
+    r.removeAttribute('repeat');
+    for (let i = 0; i < count - 1; i++) {
+      let html = unsplashFix(r.outerHTML);
+      replaceElement(r, html, false);
+    }
+  }
+}
+
+// initially, on hard load/reload:
+// mount components and load the page
+componentMount().then(x => loadPage());
+
+// End of copy
 
 // declaring global variables
 let books,
@@ -36,14 +96,14 @@ async function start() {
 function addSortingOptions() {
   document.querySelector('.sortingOptions').innerHTML = /*html*/`
     <label><span>Sort by:</span>
-      <select class="sortOption bg-secondary">
+      <select class="sortOption">
         <option>ID</option>
         <option>Author</option>
         <option>Title</option>
         <option>Price</option>
       </select>
-      <button class = "sortOrderAsc bg-secondary">Asc</button>
-      <button class = "sortOrderDes bg-secondary">Desc</button>
+      <button class = "sortOrderAsc">Asc</button>
+      <button class = "sortOrderDes">Desc</button>
     </label>
   `;
   document.querySelector('.sortOption').addEventListener('change', event => {
@@ -77,21 +137,21 @@ function getAuthors() {
 function addFilters() {
   document.querySelector('.filters').innerHTML = /*html*/`
     <label><span>Filter by categories:</span>
-      <select class="categoryFilter bg-secondary">
+      <select class="categoryFilter">
         <option>all</option>
         ${categories.map(category => `<option>${category}</option>`).join('')}
       </select>
     </label>
 
     <label><span>Filter by authors:</span>
-      <select class="authorFilter bg-secondary">
+      <select class="authorFilter">
         <option>all</option>
         ${authors.map(author => `<option>${author}</option>`).join('')}
       </select>
     </label>
 
     <label><span>Filter by price:</span>
-    <select class="priceFilter bg-secondary">
+    <select class="priceFilter">
       <option value = 0>all</option>
       ${priceIntervals.map(priceRange => `<option>${priceRange}</option>`).join('')}
     </select>
@@ -177,13 +237,13 @@ function displayBooks() {
   let htmlArray = filteredBooks.map(({
     id, title, author, description, category, price
   }) => /*html*/`
-    <div class="book col col-3 col-lg-2 bg-primary rounded text-white" id = "${id}">
+    <div class="book" id = "${id}">
       <h3 id = "${id}">${title}</h3>
-      <p id = "${id}"><span class="badge badge-secondary" id = "${id}">ID</span>${id}</p>
-      <p id = "${id}"><span class="badge badge-secondary" id = "${id}">Author</span>${author}</p>
-      <p id = "${id}"><span class="badge badge-secondary" id = "${id}">Category</span>${category}</p>
-      <p id = "${id}"><span class="badge badge-secondary" id = "${id}">Price</span>${price} €</p>
-      <button class="buy bg-secondary" id = "${id}">Buy</button>
+      <p id = "${id}"><span id = "${id}">ID</span>${id}</p>
+      <p id = "${id}"><span id = "${id}">Author</span>${author}</p>
+      <p id = "${id}"><span id = "${id}">Category</span>${category}</p>
+      <p id = "${id}"><span id = "${id}">Price</span>${price} €</p>
+      <button class="buy" id = "${id}">Buy</button>
     </div>
   `);
   document.querySelector('.bookList').innerHTML = htmlArray.join('');
@@ -215,13 +275,13 @@ function displayDetails(id) {
       <p><span>Category</span>${book.category}</p>
       <p><span>Price</span>${book.price}</p>
       <img src="/image${book.id}.jpg" alt="Bookcover for the displayed book">
-      <button class="buy bg-secondary" id = "${book.id}">Buy</button>
+      <button class="buy" id = "${book.id}">Buy</button>
     </div>
   `;
 
   document.querySelector('.bookDetails').innerHTML = html;
   document.querySelector('.bookList').innerHTML = '';
-  document.querySelector('.backIcon').innerHTML = `<button class = "backButton bg-secondary">go back</button>`
+  document.querySelector('.backIcon').innerHTML = `<button class = "backButton">go back</button>`
   document.querySelector('.backButton').addEventListener('click', () => {
     document.querySelector('.backIcon').innerHTML = ""
     document.querySelector('.bookDetails').innerHTML = ""
