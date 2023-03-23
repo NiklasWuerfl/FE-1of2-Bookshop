@@ -1,8 +1,9 @@
 @import 'bootstrap/scss/functions';
 
 // Overrides 
-$primary: #c93f3f;
+$primary: #174420;
 $secondary: rgb(200, 200, 200);
+$tertiary: rgb(74, 0, 0);
 $font-family-sans-serif: 'Inter, system-ui, Avenir, Helvetica, Arial, sans-serif';
 $font-family-base: 'Helvetica';
 $font-size-base: 1.3rem;
@@ -12,3 +13,5 @@ $font-size-base: 1.3rem;
 // (uncomment temporarily and follow the link
 //  using command ctrl/cmd click in VSC)
 // @import 'bootstrap/scss/variables';
+
+// bright red #c93f3f;

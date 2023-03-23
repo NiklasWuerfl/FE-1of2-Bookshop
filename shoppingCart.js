@@ -1,4 +1,4 @@
-import { displayBooks, books } from '/main.js'
+import { displayBooks, books, displayDetails } from '/main.js'
 import sort from './sorting'
 export default {
   addButtonListeners
@@ -60,7 +60,7 @@ function addButtonListeners() {
   })
 }
 
-function showCart() {   
+function showCart() {
   // get books that are in the cart.
   // let cartBooks = await getfilteredJSON('/books.json')
   let cartBooks = getCartBooks()
@@ -75,11 +75,11 @@ function showCart() {
   // book title, number of books of that title, the book price and a row sum
   /*html*/`
     <tr class="cartBook">
-      <td>${title}</td>
+      <td class = "cartTitle" id = ${id}>${title}</td>
       <td>${price} €</td>
-      <td><button class = "decreaseQuantity bg-secondary" id = "${id}">-</button></td>
+      <td><button type="button" class = "decreaseQuantity btn btn-secondary" id = "${id}">-</button></td>
       <td>${quantity}</td>
-      <td><button class = "increaseQuantity bg-secondary" id = "${id}">+</button></td>
+      <td><button type="button" class = "increaseQuantity btn btn-secondary" id = "${id}">+</button></td>
       <td>${quantity * price} €</td>
     </tr>
     
@@ -106,12 +106,12 @@ function showCart() {
   </tfoot>
 `
   
-  let emptyButton = "<button class = 'emptyCart bg-secondary'>empty Cart</button>"
+  let emptyButton = `<button type="button" class = 'emptyCart btn btn-secondary'>empty Cart</button>`
   htmlArray.unshift(htmlTableHeader)
   htmlArray.push(htmlTotal)
   document.querySelector('.bookList').innerHTML = ""
   document.querySelector('.bookDetails').innerHTML = ""
-  document.querySelector('.backIcon').innerHTML = `<button class = "backButton bg-secondary">go back</button>`
+  document.querySelector('.backIcon').innerHTML = `<button type="button" class = "backButton btn btn-secondary">go back</button>`
   document.querySelector('.cartContent').innerHTML = htmlArray.join('')
   document.querySelector('.emptyIcon').innerHTML = emptyButton
 
@@ -128,21 +128,34 @@ function showCart() {
   Array.from(allMinusButtons).forEach(button => {
     button.addEventListener('click', event => {
       let index = shoppingCart.indexOf(parseInt(event.target.id));
-      shoppingCart.splice(index,1)
+      shoppingCart.splice(index, 1)
       showCart()
     });
   });
   // empty Cart
   document.querySelector('.emptyCart').addEventListener('click', () => {
-      shoppingCart = []
-      showCart()
+    shoppingCart = []
+    showCart()
   });
 
-
+  // leave Shopping cart
   document.querySelector('.backButton').addEventListener('click', () => {
     document.querySelector('.backIcon').innerHTML = ""
     document.querySelector('.cartContent').innerHTML = ""
+    document.querySelector('.emptyIcon').innerHTML = ""
     displayBooks()
+  });
+
+  // show details of cart book
+  let allTitleButtons = document.querySelectorAll('.cartTitle')
+  Array.from(allTitleButtons).forEach(button => {
+    button.addEventListener('click', event => {
+      console.log(event.target);
+      document.querySelector('.backIcon').innerHTML = ""
+      document.querySelector('.cartContent').innerHTML = ""
+      document.querySelector('.emptyIcon').innerHTML = ""
+      displayDetails(parseInt(event.target.id))
+    })
   })
 }
 

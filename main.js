@@ -36,14 +36,14 @@ async function start() {
 function addSortingOptions() {
   document.querySelector('.sortingOptions').innerHTML = /*html*/`
     <label><span>Sort by:</span>
-      <select class="sortOption bg-secondary">
+      <select class="sortOption form-select bg-secondary">
         <option>ID</option>
         <option>Author</option>
         <option>Title</option>
         <option>Price</option>
       </select>
-      <button class = "sortOrderAsc bg-secondary">Asc</button>
-      <button class = "sortOrderDes bg-secondary">Desc</button>
+      <button type="button" class = "sortOrderAsc btn btn-secondary">Asc</button>
+      <button type="button" class = "sortOrderDes btn btn-secondary">Desc</button>
     </label>
   `;
   document.querySelector('.sortOption').addEventListener('change', event => {
@@ -77,21 +77,21 @@ function getAuthors() {
 function addFilters() {
   document.querySelector('.filters').innerHTML = /*html*/`
     <label><span>Filter by categories:</span>
-      <select class="categoryFilter bg-secondary">
+      <select class="categoryFilter form-select bg-secondary">
         <option>all</option>
         ${categories.map(category => `<option>${category}</option>`).join('')}
       </select>
     </label>
 
     <label><span>Filter by authors:</span>
-      <select class="authorFilter bg-secondary">
+      <select class="authorFilter form-select bg-secondary">
         <option>all</option>
         ${authors.map(author => `<option>${author}</option>`).join('')}
       </select>
     </label>
 
     <label><span>Filter by price:</span>
-    <select class="priceFilter bg-secondary">
+    <select class="priceFilter form-select bg-secondary">
       <option value = 0>all</option>
       ${priceIntervals.map(priceRange => `<option>${priceRange}</option>`).join('')}
     </select>
@@ -176,14 +176,21 @@ function displayBooks() {
   // !! add sort options for Author and DESCENDING for all of them !!
   let htmlArray = filteredBooks.map(({
     id, title, author, description, category, price
-  }) => /*html*/`
-    <div class="book col col-3 col-lg-2 bg-primary rounded text-white" id = "${id}">
+  }) => // maybe use mx? or offset? -> takes colomns in a row...
+   /*html*/`
+    <div class="book col col-12 col-md-6 col-lg-4 col-xl-3 col-xxl-2 bg-primary rounded text-white" id = "${id}">
       <h3 id = "${id}">${title}</h3>
-      <p id = "${id}"><span class="badge badge-secondary" id = "${id}">ID</span>${id}</p>
-      <p id = "${id}"><span class="badge badge-secondary" id = "${id}">Author</span>${author}</p>
-      <p id = "${id}"><span class="badge badge-secondary" id = "${id}">Category</span>${category}</p>
-      <p id = "${id}"><span class="badge badge-secondary" id = "${id}">Price</span>${price} €</p>
-      <button class="buy bg-secondary" id = "${id}">Buy</button>
+      <table id = ${id} class = "table text-secondary border">
+      <tr id = "${id}">
+        <th id = ${id}>ID</th> <td id = ${id}>${id}</td> </tr>
+      <tr id = "${id}">
+        <th id = ${id}>Author</th> <td id = ${id}>${author}</td> </tr>
+      <tr id = "${id}">
+        <th id = ${id}>Category</th> <td id = ${id}>${category}</td> </tr>
+      <tr id = "${id}">
+        <th id = ${id}>Price</th> <td id = ${id}>${price} €</td> </tr>
+      </table>
+      <button type="button" class="buy btn btn-secondary" id = "${id}">Buy</button>
     </div>
   `);
   document.querySelector('.bookList').innerHTML = htmlArray.join('');
@@ -207,21 +214,34 @@ function displayBooks() {
 function displayDetails(id) {
   let book = books.find((b) => id === b.id);
   let html =  /*html*/`
-    <div class="details">
-      <h3>${book.title}</h3>
-      <p><span>ID</span>${book.id}</p>
-      <p><span>Author</span>${book.author}</p>
-      <p><span>Description</span>${book.description}</p>
-      <p><span>Category</span>${book.category}</p>
-      <p><span>Price</span>${book.price}</p>
-      <img src="/image${book.id}.jpg" alt="Bookcover for the displayed book">
-      <button class="buy bg-secondary" id = "${book.id}">Buy</button>
+    <div class="details bg-white m-5">
+      <div class="row">
+        <h3 class="text-center my-3">${book.title}</h3>
+      </div>
+      <div class="clearfix">
+        <table id = ${book.id} class = "col table text-black col-6">
+        <tr id = "${book.id}">
+          <th id = ${book.id}>ID</th> <td id = ${book.id}>${book.id}</td> </tr>
+        <tr id = "${book.id}">
+          <th id = ${book.id}>Author</th> <td id = ${book.id}>${book.author}</td> </tr>
+        <tr id = "${book.id}">
+          <th id = ${book.id}>Description</th> <td id = ${book.id}>${book.description}</td> </tr>
+        <tr id = "${book.id}">
+          <th id = ${book.id}>Category</th> <td id = ${book.id}>${book.category}</td> </tr>
+        <tr id = "${book.id}">
+          <th id = ${book.id}>Price</th> <td id = ${book.id}>${book.price} €</td> </tr>
+        </table>
+        <img class = "img-fluid img-thumbnail col col-4" src="/image${book.id}.jpg" alt="Bookcover for the displayed book">
+      </div>
+      <div class = "row text-center">
+        <button type="button" class="buy btn btn-primary offset-2 col-8 my-3" id = "${book.id}">Buy</button>
+      </div>
     </div>
   `;
 
   document.querySelector('.bookDetails').innerHTML = html;
   document.querySelector('.bookList').innerHTML = '';
-  document.querySelector('.backIcon').innerHTML = `<button class = "backButton bg-secondary">go back</button>`
+  document.querySelector('.backIcon').innerHTML = `<button type="button" class = "backButton btn btn-secondary">go back</button>`
   document.querySelector('.backButton').addEventListener('click', () => {
     document.querySelector('.backIcon').innerHTML = ""
     document.querySelector('.bookDetails').innerHTML = ""
@@ -234,4 +254,4 @@ function displayDetails(id) {
 
 start()
 
-export {displayBooks, books}
+export {displayBooks, books, displayDetails}

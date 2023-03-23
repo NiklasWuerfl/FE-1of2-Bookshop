@@ -1,6 +1,11 @@
 @import 'variable-overrides.scss';
 @import "bootstrap/scss/bootstrap";
 
+$headerBG: rgba(0, 0, 0, 0.5);
+
+.my-header {
+  background-color: $headerBG;
+}
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -17,18 +22,15 @@ body {
 
 main{
   flex: 1;
-  // max-width: 700px;
-  margin: 0 auto;
 }
 
-.cartBook {
-  background-color: lightblue;
-  color: black;
-  padding: 20px;
-  margin: 20px;
-  border-radius: 10px;
-  /* line-height: 10%; */
-}
+// .cartBook {
+//   background-color: lightblue;
+//   color: black;
+//   padding: 20px;
+//   margin: 20px;
+//   border-radius: 10px;
+// }
 
 // .book p span {
 //   display: inline-block;
@@ -53,43 +55,43 @@ main{
 //   width: 180px;
 // }
 
-button {
-  background-color: lightblue;
-  border-radius: 5px;
-}
+// button {
+//   background-color: lightblue;
+//   border-radius: 5px;
+// }
 
-.bookDetails {
-  /* background-color: white; */
-  color: black;
-  padding: 20px;
-  margin: 0px;
-  border-radius: 0px;
-  line-height: 80%;
-}
+// .bookDetails {
+//   /* background-color: white; */
+//   color: black;
+//   padding: 20px;
+//   margin: 0px;
+//   border-radius: 0px;
+//   line-height: 80%;
+// }
 
-.details{
-  background-color: white;
-  position: relative;
-  color: black;
-  padding: 20px;
-  margin: 0px;
-  border-radius: 10px;
-  line-height: 110%;
-}
+// .details{
+//   background-color: white;
+//   position: relative;
+//   color: black;
+//   padding: 20px;
+//   margin: 0px;
+//   border-radius: 10px;
+//   line-height: 110%;
+// }
 
-.details p span {
-  display: inline-block;
-  width: 110px;
-  text-align: left;
-  font-weight: 700;
-  /* height: 100px; */
-  margin-bottom: 10px;
-}
-/* span::before {
-  content: "Title:";
-  display: block;
-  margin-bottom: 5px;
-} */
+// .details p span {
+//   display: inline-block;
+//   width: 110px;
+//   text-align: left;
+//   font-weight: 700;
+//   /* height: 100px; */
+//   margin-bottom: 10px;
+// // }
+// // /* span::before {
+//   content: "Title:";
+//   display: block;
+//   margin-bottom: 5px;
+// } */
 
 .cartContent h3 span {
   display: inline-block;
@@ -97,10 +99,5 @@ button {
 }
 
 img{
-  max-width: 90%;
-  margin: 0 auto;
-  /* position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
+  max-height: 50rem;
 }

@@ -9,23 +9,23 @@
   </head>
   
   <body class="bg-primary">
-    <header class="bg-black">
-      <div class="container">
-        <div class="row row-cols-12"></div>
-          <div class="col col-4 filters"></div>
-          <div class="col col-4 sortingOptions"></div>
-          <div class= "col col-4 cartIcons">
-            <div class = "cartIcon"><button class ="cartButton bg-secondary">Shop Cart</button></div>
-            <div class = "backIcon"></div>
-            <div class = "emptyIcon"></div>
-          </div>
+    <header class="my-header d-flex flex-column flex-sm-row justify-content-around mx-1">
+        <div class="row row-cols-12">
+        <div class="col col-4 col-md-8 col-sm-12 filters"></div>
+        <div class="col col-6 col-md-4 col-sm-12 sortingOptions"></div>
+        <div class= "col col-2 cartIcons">
+          <div class = "cartIcon"><button type="button" class="cartButton btn btn-primary">Shop Cart</button></div>
+          <div class = "backIcon"></div>
+          <div class = "emptyIcon"></div>
         </div>
+      </div>
       </div>
     </header>
     <main>
-      <table class = "cartContent table table-striped bg-secondary"></table>
+      <!-- Need margin outside and prevent from going too wide. -->
+      <table class = "cartContent m-5 table table-striped bg-secondary"></table>
       <div class = "container">
-        <div class="bookList row row-cols-12 g-5 gx-3"></div>
+        <div class="bookList row row-cols-12 g-5"></div>
       </div>
       <div class="bookDetails"></div>
     </main>
