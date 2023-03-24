@@ -20,8 +20,28 @@ body {
   flex-direction: column;
 }
 
+.book {
+  cursor: pointer;
+}
+
+.cartCSV {
+  fill: white;
+}
+
+.tablePicture {
+  max-width: 95%;
+}
+
+.btn {
+  margin: 1rem;
+}
+
 main{
   flex: 1;
+}
+
+.cartTitle{
+  cursor: pointer;
 }
 
 // .cartBook {

@@ -74,7 +74,7 @@ function showCart() {
   }) =>
   // book title, number of books of that title, the book price and a row sum
   /*html*/`
-    <tr class="cartBook">
+    <tr class="cartBook align-middle">
       <td class = "cartTitle" id = ${id}>${title}</td>
       <td>${price} €</td>
       <td><button type="button" class = "decreaseQuantity btn btn-secondary" id = "${id}">-</button></td>

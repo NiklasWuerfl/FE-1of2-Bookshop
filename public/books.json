@@ -2,39 +2,39 @@
   {
     "id": 1,
     "title": "Responsive design with Bootstrap",
-    "author": "T",
+    "author": "Niklas Würfl",
     "description": "Task Description",
     "category": "UX",
     "price": 16
   },
   {
     "id": 2,
-    "title": "e",
-    "author": "Da",
+    "title": "This is the first example book",
+    "author": "Hilarion Susskind",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquet suscipit quam id feugiat. Duis auctor aliquet ultricies. Fusce at ligula a libero tristique tincidunt vel vitae nulla. Donec quis pharetra nibh, quis malesuada arcu. In porttitor metus nulla, quis dignissim metus bibendum sed. Vestibulum lobortis, nulla nec ultrices ullamcorper, odio purus suscipit tellus, sit amet rhoncus sapien mi vel dui.",
     "category": "UX",
     "price": 132
   },
   {
     "id": 3,
-    "title": "t",
-    "author": "C",
+    "title": "This is the second example book",
+    "author": "Trai Leccese",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu massa ut neque placerat rhoncus. Praesent sodales magna vitae risus fringilla, eu semper massa tincidunt. Aenean suscipit auctor ex, ut convallis mauris tincidunt ut. Donec non lectus vel ante convallis mollis. Duis bibendum elit sed elit tristique, nec finibus sapien imperdiet. Quisque ut fringilla nulla.",
     "category": "UX",
     "price": 76
   },
   {
     "id": 4,
-    "title": "t",
-    "author": "D",
+    "title": "Third book title",
+    "author": "Kshitija Vargha",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut velit euismod, convallis nibh sed, malesuada augue. Duis ullamcorper libero quis enim euismod commodo. Vestibulum eleifend scelerisque mauris, vel feugiat enim ultricies a. Nullam rutrum neque in libero facilisis tristique. Curabitur commodo metus eu ipsum pretium, id maximus turpis pellentesque.",
     "category": "UX",
     "price": 64
   },
   {
     "id": 5,
-    "title": "h",
-    "author": "Z",
+    "title": "Fourth book title",
+    "author": "Espiridión Castro",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod nunc id metus luctus bibendum. Etiam at mauris sed purus rutrum tristique. Praesent euismod, augue sit amet accumsan hendrerit, purus leo maximus augue, eu bibendum ex sapien ac mi. Morbi scelerisque nunc vel aliquam rutrum. Mauris ut felis ac velit laoreet dictum.",
     "category": "UX",
     "price": 91
@@ -49,7 +49,7 @@
   },
   {
     "id": 7,
-    "title": "l",
+    "title": "Fifth book title",
     "author": "B",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non orci sed sapien faucibus placerat. Maecenas semper, eros vel blandit commodo, elit purus blandit ante, eu pulvinar felis massa sit amet justo. Nam euismod nibh ac purus dignissim, eget malesuada dolor dignissim. Fusce semper libero a ligula varius hendrerit.",
     "category": "HTML",
@@ -57,7 +57,7 @@
   },
   {
     "id": 8,
-    "title": "e",
+    "title": "Book Number six",
     "author": "G",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at ante mi. Duis ultrices quis nisi in euismod. Curabitur vitae blandit odio. Donec congue orci vel tellus luctus convallis. Aenean in velit eget ipsum luctus efficitur. Praesent suscipit orci ut risus vehicula, at fringilla ipsum laoreet.",
     "category": "HTML",
@@ -65,7 +65,7 @@
   },
   {
     "id": 9,
-    "title": "u",
+    "title": "Number 7 Book",
     "author": "A",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam feugiat posuere augue, at elementum velit. Nulla facilisi. Nulla posuere enim non leo vestibulum, sed lacinia ipsum varius. Quisque ac ante imperdiet, commodo tellus sed, maximus lorem. Vivamus et orci nec massa eleifend semper a vel magna. Mauris eu felis commodo, aliquet arcu sit amet, efficitur massa.",
     "category": "HTML",

@@ -178,7 +178,8 @@ function displayBooks() {
     id, title, author, description, category, price
   }) => // maybe use mx? or offset? -> takes colomns in a row...
    /*html*/`
-    <div class="book col col-12 col-md-6 col-lg-4 col-xl-3 col-xxl-2 bg-primary rounded text-white" id = "${id}">
+    <div class="g-5 col col-12 col-md-12 col-lg-6 col-xl-4 col-xxl-3 text-white" id = "${id}">
+      <div class="book bg-primary p-3 rounded">
       <h3 id = "${id}">${title}</h3>
       <table id = ${id} class = "table text-secondary border">
       <tr id = "${id}">
@@ -191,6 +192,7 @@ function displayBooks() {
         <th id = ${id}>Price</th> <td id = ${id}>${price} €</td> </tr>
       </table>
       <button type="button" class="buy btn btn-secondary" id = "${id}">Buy</button>
+      </div>
     </div>
   `);
   document.querySelector('.bookList').innerHTML = htmlArray.join('');
@@ -218,23 +220,25 @@ function displayDetails(id) {
       <div class="row">
         <h3 class="text-center my-3">${book.title}</h3>
       </div>
-      <div class="clearfix">
-        <table id = ${book.id} class = "col table text-black col-6">
-        <tr id = "${book.id}">
-          <th id = ${book.id}>ID</th> <td id = ${book.id}>${book.id}</td> </tr>
-        <tr id = "${book.id}">
-          <th id = ${book.id}>Author</th> <td id = ${book.id}>${book.author}</td> </tr>
-        <tr id = "${book.id}">
-          <th id = ${book.id}>Description</th> <td id = ${book.id}>${book.description}</td> </tr>
-        <tr id = "${book.id}">
-          <th id = ${book.id}>Category</th> <td id = ${book.id}>${book.category}</td> </tr>
-        <tr id = "${book.id}">
-          <th id = ${book.id}>Price</th> <td id = ${book.id}>${book.price} €</td> </tr>
-        </table>
+      <div class="tablePicture mx-auto row row-cols-12">
+        <div class=" tableHolder col col-12 gx-3">
+          <table id = ${book.id} class = "table text-black">
+          <tr id = "${book.id}">
+            <th id = ${book.id}>ID</th> <td id = ${book.id}>${book.id}</td> </tr>
+          <tr id = "${book.id}">
+            <th id = ${book.id}>Author</th> <td id = ${book.id}>${book.author}</td> </tr>
+          <tr id = "${book.id}">
+            <th id = ${book.id}>Description</th> <td id = ${book.id}>${book.description}</td> </tr>
+          <tr id = "${book.id}">
+            <th id = ${book.id}>Category</th> <td id = ${book.id}>${book.category}</td> </tr>
+          <tr id = "${book.id}">
+            <th id = ${book.id}>Price</th> <td id = ${book.id}>${book.price} €</td> </tr>
+          </table>
+        </div>
         <img class = "img-fluid img-thumbnail col col-4" src="/image${book.id}.jpg" alt="Bookcover for the displayed book">
       </div>
-      <div class = "row text-center">
-        <button type="button" class="buy btn btn-primary offset-2 col-8 my-3" id = "${book.id}">Buy</button>
+      <div class = "row mx-auto">
+        <button type="button" class="buy col btn btn-primary col-8 my-3" id = "${book.id}">Buy</button>
       </div>
     </div>
   `;
