@@ -44,21 +44,6 @@ main{
   cursor: pointer;
 }
 
-// .cartBook {
-//   background-color: lightblue;
-//   color: black;
-//   padding: 20px;
-//   margin: 20px;
-//   border-radius: 10px;
-// }
-
-// .book p span {
-//   display: inline-block;
-//   // width: 110px;
-//   font-weight: 700;
-
-// }
-
 .cartBook p span {
   display: inline-block;
   width: 110px;
@@ -69,55 +54,18 @@ main{
   color: white;
 }
 
-// label span {
-//   padding-left: 25px;
-//   display: inline-block;
-//   width: 180px;
-// }
 
-// button {
-//   background-color: lightblue;
-//   border-radius: 5px;
-// }
-
-// .bookDetails {
-//   /* background-color: white; */
-//   color: black;
-//   padding: 20px;
-//   margin: 0px;
-//   border-radius: 0px;
-//   line-height: 80%;
-// }
-
-// .details{
-//   background-color: white;
-//   position: relative;
-//   color: black;
-//   padding: 20px;
-//   margin: 0px;
-//   border-radius: 10px;
-//   line-height: 110%;
-// }
-
-// .details p span {
-//   display: inline-block;
-//   width: 110px;
-//   text-align: left;
-//   font-weight: 700;
-//   /* height: 100px; */
-//   margin-bottom: 10px;
-// // }
-// // /* span::before {
-//   content: "Title:";
-//   display: block;
-//   margin-bottom: 5px;
-// } */
-
-.cartContent h3 span {
+.cartContent {
+  max-width: 90%;
+  .h3 span {
   display: inline-block;
   width: 110px;
-}
+}}
 
 img{
   max-height: 50rem;
+}
+
+.details {
+  max-width: 80%;
 }

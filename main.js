@@ -216,7 +216,7 @@ function displayBooks() {
 function displayDetails(id) {
   let book = books.find((b) => id === b.id);
   let html =  /*html*/`
-    <div class="details bg-white m-5">
+    <div class="details bg-white mb-2 mx-auto">
       <div class="row">
         <h3 class="text-center my-3">${book.title}</h3>
       </div>
@@ -237,8 +237,8 @@ function displayDetails(id) {
         </div>
         <img class = "img-fluid img-thumbnail col col-4" src="/image${book.id}.jpg" alt="Bookcover for the displayed book">
       </div>
-      <div class = "row mx-auto">
-        <button type="button" class="buy col btn btn-primary col-8 my-3" id = "${book.id}">Buy</button>
+      <div class = "row mx-auto align-content-center">
+        <button type="button" class="buy col btn btn-primary my-3" id = "${book.id}">Buy</button>
       </div>
     </div>
   `;

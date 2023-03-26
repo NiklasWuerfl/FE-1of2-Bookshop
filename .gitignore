@@ -23,3 +23,12 @@ AssignmentDescription.txt
 *.njsproj
 *.sln
 *.sw?
+html/app.html
+html/pages/about.html
+html/pages/photos-of-fruits.html
+html/pages/photos-of-the-sea.html
+html/pages/photos-portraits.html
+html/pages/start.html
+html/parts/footer.html
+html/parts/logo.html
+html/parts/nav.html
